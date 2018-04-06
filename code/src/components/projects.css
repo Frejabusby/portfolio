@@ -1,0 +1,12 @@
+.projects-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project {
+  background-color: #000;
+  margin: 20px;
+  width: calc(33% - 40px);
+  height: 300px;
+}

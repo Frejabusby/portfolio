@@ -1,0 +1,9 @@
+.header-menu {
+  height: 60px;
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.header-menu a {
+  margin: 10px;
+}

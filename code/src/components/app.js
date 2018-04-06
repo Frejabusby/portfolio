@@ -1,11 +1,18 @@
 import React from "react"
+import Menu from "./menu"
+import Hero from "./hero"
+import Projects from "./projects"
+import About from "./about"
 
 class App extends React.Component {
 
   render() {
     return (
-      <div>
-        Find me in src/app.js!
+      <div className="container">
+        <Menu />
+        <Hero />
+        <Projects />
+        <About />
       </div>
     )
   }

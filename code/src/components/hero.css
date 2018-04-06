@@ -1,0 +1,9 @@
+.hero-section h2 {
+  color: #fff;
+}
+
+.hero-section {
+  background: url("../images/hero-img.jpg");
+  background-position: left center;
+  padding: 200px 100px;
+}
