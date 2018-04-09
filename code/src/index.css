@@ -37,3 +37,16 @@ h1 {
 h2 {
   font-size: 40px;
 }
+
+.header-menu {
+  height: 60px;
+  text-align: right;
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.header-menu a {
+	color: #222922;
+	text-decoration: none;
+  margin: 10px;
+}

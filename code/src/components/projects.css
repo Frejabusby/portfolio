@@ -1,12 +1,38 @@
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .projects-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  animation: 0.8s ease-in 0s slideInFromTop;
+  z-index: 0;
 }
 
 .project {
   background-color: #000;
   margin: 20px;
-  width: calc(33% - 40px);
+  width: calc(100% - 40px);
   height: 300px;
+}
+
+@media (min-width: 600px) {
+  .project {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (min-width: 900px) {
+  .project {
+    width: calc(25% - 40px);
+  }
 }

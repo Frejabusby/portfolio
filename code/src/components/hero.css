@@ -6,4 +6,6 @@
   background: url("../images/hero-img.jpg");
   background-position: left center;
   padding: 200px 100px;
+  z-index: 5;
+  position: relative;
 }
