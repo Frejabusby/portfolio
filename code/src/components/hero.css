@@ -1,3 +1,30 @@
+@keyframes moveButton {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(1px);
+  }
+
+  40% {
+    transform: translateY(4px);
+  }
+
+  60% {
+    transform: translateY(2px);
+  }
+
+  80% {
+    transform: translateY(1px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 .hero-section h2 {
   color: #fff;
 }
@@ -5,7 +32,27 @@
 .hero-section {
   background: url("../images/hero-img.jpg");
   background-position: left center;
-  padding: 200px 100px;
-  z-index: 5;
-  position: relative;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+  justify-content: center;
+}
+
+.hero-section a {
+  align-self: center;
+  bottom: 30px;
+  height: 40px;
+  position: absolute;
+  width: 40px;
+}
+
+.scroll-down-button {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  animation: moveButton 1s infinite cubic-bezier(0.1, 0.5, 0.7, 0.1);
 }

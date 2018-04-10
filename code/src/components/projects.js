@@ -5,7 +5,8 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div className="projects-section">
+      <div id="projects" className=" row projects-section">
+
         <div className="project">
           <img />
         </div>

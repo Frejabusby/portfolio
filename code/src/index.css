@@ -50,3 +50,7 @@ h2 {
 	text-decoration: none;
   margin: 10px;
 }
+
+.row {
+	padding: 50px;
+}
