@@ -4,22 +4,12 @@ import "./projects.css"
 class Projects extends React.Component {
 
   render() {
+    console.log(this.props.image)
     return (
-      <div id="projects" className=" row projects-section">
-
         <div className="project">
-          <img />
+        <img src={require(`../images/${this.props.image}`)} />
+        <h2>{this.props.name}</h2>
         </div>
-        <div className="project">
-          <img />
-        </div>
-        <div className="project">
-          <img />
-        </div>
-        <div className="project">
-          <img />
-        </div>
-      </div>
     )
   }
 }
