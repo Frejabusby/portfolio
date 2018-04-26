@@ -3,7 +3,7 @@ import Hero from "./hero"
 import Projects from "./projects"
 import About from "./about"
 
-const productsJson = require("./../projects.json")
+// const productsJson = require("./../projects.json")
 
 class Home extends React.Component {
   constructor(props) {
@@ -11,8 +11,7 @@ class Home extends React.Component {
     this.scrollTo = React.createRef()
   }
 
-  scrollsDownTo = () => {
-    console.log("hej")
+  scrollDownTo = () => {
     window.scrollTo({
       top: this.scrollTo.current.getBoundingClientRect().y,
       behavior: "smooth"
@@ -23,15 +22,17 @@ class Home extends React.Component {
     return (
       <div>
         <Hero
-          scrollDown={this.scrollDownTo} />
+          callbackScroll={this.scrollDownTo} />
         <div id="projects" className="row projects-section" ref={this.scrollTo}>
-          {productsJson.projects.map((project) => {
+          <Projects />
+          {/* {productsJson.projects.map((project) => {
             return <Projects
               key={project.id}
               name={project.name}
               image={project.file}
-              description={project.description} />
-          })}
+              description={project.description}
+              callbackProjects={this.projectsData} />
+          })} */}
         </div>
         <About />
       </div>

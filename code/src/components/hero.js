@@ -1,25 +1,12 @@
 import React from "react"
-// import Scroll from 'react-scroll'
 import "./hero.css"
-
-// var DirectLink = Scroll.DirectLink;
-// var Element    = Scroll.Element;
-// var Events     = Scroll.Events;
-// var scroll     = Scroll.animateScroll;
-// var scrollSpy  = Scroll.scrollSpy;
 
 class Hero extends React.Component {
 
-  // onClickScroll = () => {
-  //   window.scrollTo({
-  //     top: 1000,
-  //     behavior: "smooth"
-  //   })
-  // }
-
   onClickScroll = event => {
+    console.log("scroll down")
     event.preventDefault()
-    this.props.scrollDown()
+    this.props.callbackScroll()
   }
 
   render() {
