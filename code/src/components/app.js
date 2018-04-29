@@ -6,10 +6,6 @@ import About from "./about"
 import Footer from "./footer"
 
 class App extends React.Component {
-  //
-  // projectsInformation = () => {
-  //   console.log("projects information")
-  // }
 
   render() {
     return (
@@ -23,7 +19,7 @@ class App extends React.Component {
 
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
+          <Route path="/projects" render={() => <Projects projectsClicked={true} />} />
 
           <Footer />
 

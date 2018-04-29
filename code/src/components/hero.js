@@ -4,7 +4,6 @@ import "./hero.css"
 class Hero extends React.Component {
 
   onClickScroll = event => {
-    console.log("scroll down")
     event.preventDefault()
     this.props.callbackScroll()
   }

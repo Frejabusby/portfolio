@@ -5,19 +5,31 @@ const projectsJson = require("./../projects.json")
 
 class Projects extends React.Component {
 
-  renderProjectData = () => (
+  mapProjectData = () => (
     projectsJson.projects.map(project => (
       <div className="project">
         <img src={require(`../images/${project.file}`)} alt="project overview" />
-        <h2>{project.name}</h2>
+        <div className="project-hover-info">
+          <span>+</span>
+          <h2 className="project-name-hover">{project.name}</h2>
+        </div>
       </div>
     ))
   )
 
+  renderProjects = () => {
+    if (this.props.projectsClicked) {
+      return this.mapProjectData()
+    } else {
+      return this.mapProjectData().slice(1)
+    }
+  }
+
   render() {
     return (
-      <div>
-        {this.renderProjectData()}
+      <div className="row projects-section">
+        <h2 className="my-projects-title">My Projects</h2>
+        {this.renderProjects()}
       </div>
     )
   }
