@@ -1,18 +1,21 @@
 import React from "react"
+import { Link } from "react-router-dom"
+import projectData from "../project-data"
 import "./projects.css"
-
-const projectsJson = require("./../projects.json")
 
 class Projects extends React.Component {
 
   mapProjectData = () => (
-    projectsJson.projects.map(project => (
+    projectData.map(project => (
       <div className="project">
-        <img src={require(`../images/${project.file}`)} alt="project overview" />
-        <div className="project-hover-info">
-          <span>+</span>
-          <h2 className="project-name-hover">{project.name}</h2>
-        </div>
+        <Link to={`/projects/${project.id}`}>
+          <img src={require(`../images/${project.file}`)} alt="project overview" />
+          <div className="project-hover-info">
+            {/* <span>+</span> */}
+            <h2 className="project-name-hover">{project.name}</h2>
+            <button>Read about</button>
+          </div>
+        </Link>
       </div>
     ))
   )

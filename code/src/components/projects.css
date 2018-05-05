@@ -70,8 +70,8 @@
   }
 }
 
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
   .project {
     width: calc(25% - 40px);
   }
-}
+} */

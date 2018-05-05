@@ -2,6 +2,7 @@ import React from "react"
 import { BrowserRouter, Route, Link } from "react-router-dom"
 import Home from "./home"
 import Projects from "./projects"
+import Project from "./project"
 import About from "./about"
 import Footer from "./footer"
 
@@ -19,8 +20,8 @@ class App extends React.Component {
 
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/projects" render={() => <Projects projectsClicked={true} />} />
-
+          <Route exact path="/projects" render={() => <Projects projectsClicked={true} />} />
+          <Route path="/projects/:id" component={Project} />
           <Footer />
 
         </div>
