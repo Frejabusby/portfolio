@@ -1,6 +1,7 @@
 import React from "react"
 import Hero from "./hero"
 import Projects from "./projects"
+import Topics from "./topics"
 import About from "./about"
 
 class Home extends React.Component {
@@ -24,6 +25,7 @@ class Home extends React.Component {
         <div ref={this.scrollTo}>
           <Projects />
         </div>
+        <Topics />
         <About />
       </div>
     )

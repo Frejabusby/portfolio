@@ -1,9 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import projectData from "../project-data"
+import Button from "./button"
 import "./projects.css"
 
 class Projects extends React.Component {
+  state = {
+    button: "Show all projects"
+  }
 
   mapProjectData = () => (
     projectData.map(project => (
@@ -20,6 +24,13 @@ class Projects extends React.Component {
     ))
   )
 
+  projectButton = () => {
+    if (!this.props.projectsClicked) {
+      return <Button
+        text={this.state.button} />
+    }
+  }
+
   renderProjects = () => {
     if (this.props.projectsClicked) {
       return this.mapProjectData()
@@ -33,6 +44,7 @@ class Projects extends React.Component {
       <div className="row projects-section">
         <h2 className="my-projects-title">My Projects</h2>
         {this.renderProjects()}
+        {this.projectButton()}
       </div>
     )
   }
