@@ -22,26 +22,28 @@
 }
 
 .project {
+  border: 2px solid #f3f3f3;
   margin: 20px;
   width: calc(100% - 40px);
-  height: 100%;
   position: relative;
 }
 
 .project img {
-  height: auto;
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .project-hover-info {
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
   opacity: 0;
+  padding: 10px;
   position: absolute;
   top: 0;
   transition: .5s ease;
@@ -53,7 +55,8 @@
 }
 
 .project-hover-info h2.project-name-hover {
-  font-size: 46px;
+  color: #2d422e;
+  font-size: 36px;
 }
 
 .project-hover-info:hover {
@@ -70,8 +73,8 @@
   }
 }
 
-/* @media (min-width: 900px) {
+@media (min-width: 900px) {
   .project {
     width: calc(25% - 40px);
   }
-} */
+}

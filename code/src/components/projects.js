@@ -5,9 +5,6 @@ import Button from "./button"
 import "./projects.css"
 
 class Projects extends React.Component {
-  state = {
-    button: "Show all projects"
-  }
 
   mapProjectData = () => (
     projectData.map(project => (
@@ -17,7 +14,7 @@ class Projects extends React.Component {
           <div className="project-hover-info">
             {/* <span>+</span> */}
             <h2 className="project-name-hover">{project.name}</h2>
-            <button>Read about</button>
+            <Button url={`/projects/${project.id}`} text="Read more" />
           </div>
         </Link>
       </div>
@@ -27,7 +24,8 @@ class Projects extends React.Component {
   projectButton = () => {
     if (!this.props.projectsClicked) {
       return <Button
-        text={this.state.button} />
+        url="/projects"
+        text="Show all projects" />
     }
   }
 

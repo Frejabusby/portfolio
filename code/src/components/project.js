@@ -1,5 +1,6 @@
 import React from "react"
 import projectData from "../project-data"
+import Button from "./button"
 import "./project.css"
 
 class Project extends React.Component {
@@ -34,6 +35,7 @@ class Project extends React.Component {
             <hr />
             <h2>{this.state.project.name}</h2>
             <p>{this.state.project.description}</p>
+            <Button url={this.state.project.url} text="Live application" />
           </section>
         </div>
       )
