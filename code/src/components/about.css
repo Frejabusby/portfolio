@@ -58,8 +58,8 @@
 
   .about-section-img {
     height: 100%;
-    margin: 20px 30px 20px 0px;
-    width: calc(40% - 30px);
+    margin: 20px 40px 20px 0px;
+    width: calc(40% - 40px);
   }
 
   .about-section-img img {
@@ -69,7 +69,7 @@
 
   .about-section-info {
     align-self: center;
-    margin: 20px 0px 20px 30px;
-    width: calc(60% - 30px);
+    margin: 20px 0px 20px 40px;
+    width: calc(60% - 40px);
   }
 }

@@ -32,6 +32,8 @@ class About extends React.Component {
             I’m a team player and think it’s important with knowledge sharing, especially in this trade.
             You really learn a lot by explaining your code to someone else. For that reason,
             I joined Technigo and Tjejer kodar at Google digitalakademin as a coding coach, which was so fun and a good experience.
+          </p>
+          <p>
             My favorite part of coding is the creativity and problem-solving. When I get I problem, I can’t really stop before it’s solved.
           </p>
         </div>
