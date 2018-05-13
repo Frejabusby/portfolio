@@ -14,7 +14,12 @@ class Projects extends React.Component {
           <div className="project-hover-info">
             {/* <span>+</span> */}
             <h2 className="project-name-hover">{project.name}</h2>
-            <Button url={`/projects/${project.id}`} text="Read more" height="40px" width="150px" />
+            <Button
+              url={`/projects/${project.id}`}
+              text="Read more"
+              height="40px"
+              width="150px"
+              border="2px solid #2c422d" />
           </div>
         </Link>
       </div>
@@ -25,7 +30,8 @@ class Projects extends React.Component {
     if (!this.props.projectsClicked) {
       return <Button
         url="/projects"
-        text="Show all projects" />
+        text="Show all projects"
+        border="2px solid #2c422d" />
     }
   }
 
@@ -40,7 +46,7 @@ class Projects extends React.Component {
   render() {
     return (
       <div className="projects-section">
-        <h2 className="my-projects-title">My Projects</h2>
+        <h2 className="my-projects-title">My projects</h2>
         {this.renderProjects()}
         {this.projectButton()}
       </div>

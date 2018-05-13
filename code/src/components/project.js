@@ -24,18 +24,44 @@ class Project extends React.Component {
     })
   }
 
+  renderProjectImages = () => {
+    if (this.state.project.picDesktop !== undefined) {
+      return (
+        <section className="project-image-section">
+          <img src={require(`../images/${this.state.project.picDesktop}`)} alt="project overview" />
+          <img src={require(`../images/${this.state.project.picMobile}`)} alt="project overview" />
+        </section>
+      )
+    } else {
+      return (
+        <section className="project-image-section">
+          <img src={require(`../images/${this.state.project.file}`)} alt="project overview" />
+        </section>
+      )
+    }
+  }
+
+  renderButton = () => {
+    if (this.state.project.url !== undefined) {
+      return <Button
+        url={this.state.project.url}
+        text="Live application"
+        height="60px"
+        width="300px"
+        border="2px solid #2c422d" />
+    }
+  }
+
   render() {
     if (this.state.project) {
       return (
         <div className="project-section">
-          <section className="project-image-section">
-            <img src={require(`../images/${this.state.project.file}`)} alt="project overview" />
-          </section>
+          {this.renderProjectImages()}
           <section className="project-info-section">
             <hr />
             <h2>{this.state.project.name}</h2>
             <p>{this.state.project.description}</p>
-            <Button url={this.state.project.url} text="Live application" height="60px" width="300px" />
+            {this.renderButton()}
           </section>
         </div>
       )

@@ -37,7 +37,7 @@
 
 .project-hover-info {
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(243, 243, 243, 0.9);
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -57,30 +57,30 @@
 
 .project-hover-info h2.project-name-hover {
   color: #2d422e;
-  font-size: 36px;
 }
 
 .project-hover-info:hover {
   opacity: 1;
 }
 
-.project h2 {
-  font-size: 16px;
-}
-
 @media (min-width: 600px) {
   .project {
     width: calc(50% - 40px);
+  }
+
+  .project-hover-info h2.project-name-hover {
+    font-size: 36px;
   }
 }
 
 @media (min-width: 900px) {
   .project {
-    width: calc(25% - 40px);
+    margin: 15px;
+    width: calc(25% - 30px);
   }
 
   .project-hover-info h2.project-name-hover {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .project-hover-info button {

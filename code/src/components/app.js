@@ -20,7 +20,7 @@ class App extends React.Component {
           </div>
 
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Route path="/about" render={() => <About aboutClicked={true} />} />
           <Route exact path="/projects" render={() => <Projects projectsClicked={true} />} />
           <Route path="/projects/:id" component={Project} />
           <Footer />

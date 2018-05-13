@@ -1,5 +1,5 @@
 .header-menu {
-  border-bottom: 1px solid #f3f3f3; 
+  border-bottom: 1px solid #f3f3f3;
   height: 60px;
   text-align: right;
   width: 100%;
@@ -10,4 +10,8 @@
 	color: #222922;
 	text-decoration: none;
   margin: 10px;
+}
+
+.header-menu a:hover {
+  color: #717171;
 }
