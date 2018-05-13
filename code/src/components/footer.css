@@ -1,20 +1,21 @@
-.footer {
+.footer-section {
   background-color: #2f2f2f;
   color: #fff;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 30px 50px;
   width: 100%;
 }
 
-.footer h3 {
+.footer-section h3 {
   margin: 10px;
   text-align: center;
   width: 100%;
 }
 
-.footer a {
+.footer-section a {
   color: #fff;
   font-size: 14px;
   margin: 15px;
@@ -22,6 +23,6 @@
   text-transform: uppercase;
 }
 
-.footer a:hover {
+.footer-section a:hover {
   color: #717171;
 }

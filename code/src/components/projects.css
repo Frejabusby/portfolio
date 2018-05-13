@@ -11,7 +11,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
+  padding: 30px 50px;
   /* animation: 0.8s ease 0s slideInFromTop;
   z-index: 0; */
 }
@@ -76,5 +77,13 @@
 @media (min-width: 900px) {
   .project {
     width: calc(25% - 40px);
+  }
+
+  .project-hover-info h2.project-name-hover {
+    font-size: 24px;
+  }
+
+  .project-hover-info button {
+    font-size: 18px;
   }
 }

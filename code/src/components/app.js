@@ -5,6 +5,7 @@ import Projects from "./projects"
 import Project from "./project"
 import About from "./about"
 import Footer from "./footer"
+import "./app.css"
 
 class App extends React.Component {
 

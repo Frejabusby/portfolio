@@ -14,7 +14,7 @@ class Projects extends React.Component {
           <div className="project-hover-info">
             {/* <span>+</span> */}
             <h2 className="project-name-hover">{project.name}</h2>
-            <Button url={`/projects/${project.id}`} text="Read more" />
+            <Button url={`/projects/${project.id}`} text="Read more" height="40px" width="150px" />
           </div>
         </Link>
       </div>
@@ -39,7 +39,7 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div className="row projects-section">
+      <div className="projects-section">
         <h2 className="my-projects-title">My Projects</h2>
         {this.renderProjects()}
         {this.projectButton()}

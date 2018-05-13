@@ -12,7 +12,7 @@
 
 .project-image-section, .project-info-section {
   padding: 30px;
-  width: 50%;
+  width: 100%;
 }
 
 .project-image-section img {
@@ -28,4 +28,11 @@
   text-align: left;
   margin: 0 0 15px 0;
   width: 20%;
+}
+
+@media (min-width: 600px) {
+  .project-image-section, .project-info-section {
+    padding: 30px;
+    width: 50%;
+  }
 }

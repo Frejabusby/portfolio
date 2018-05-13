@@ -35,7 +35,7 @@ class Project extends React.Component {
             <hr />
             <h2>{this.state.project.name}</h2>
             <p>{this.state.project.description}</p>
-            <Button url={this.state.project.url} text="Live application" />
+            <Button url={this.state.project.url} text="Live application" height="60px" width="300px" />
           </section>
         </div>
       )
