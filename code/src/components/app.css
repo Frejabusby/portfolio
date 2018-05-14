@@ -1,7 +1,8 @@
 .header-menu {
   border-bottom: 1px solid #f3f3f3;
-  height: 60px;
-  text-align: right;
+  height: 70px;
+  font-size: 22px;
+  text-align: center;
   width: 100%;
   padding: 20px 50px;
 }
@@ -14,4 +15,11 @@
 
 .header-menu a:hover {
   color: #717171;
+}
+
+@media (min-width: 600px) {
+  .header-menu {
+    font-size: 16px;
+    text-align: right;
+  }
 }

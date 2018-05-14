@@ -43,12 +43,13 @@ class Project extends React.Component {
 
   renderButton = () => {
     if (this.state.project.url !== undefined) {
-      return <Button
-        url={this.state.project.url}
-        text="Live application"
-        height="60px"
-        width="300px"
-        border="2px solid #2c422d" />
+      return (
+        <div className="button-section">
+          <a href={`http://frejabusby.se/projects/${this.state.project.url}`} target="_blank">
+            <button className="button dark-button">Live application</button>
+          </a>
+        </div>
+      )
     }
   }
 
@@ -58,8 +59,9 @@ class Project extends React.Component {
         <div className="project-section">
           {this.renderProjectImages()}
           <section className="project-info-section">
-            <hr />
             <h2>{this.state.project.name}</h2>
+            <hr />
+            <p className="technigue-text">{`Built in/with: ${this.state.project.techniques}`}</p>
             <p>{this.state.project.description}</p>
             {this.renderButton()}
           </section>

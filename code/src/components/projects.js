@@ -5,6 +5,15 @@ import Button from "./button"
 import "./projects.css"
 
 class Projects extends React.Component {
+  componentDidMount() {
+    this.scrollToTop()
+  }
+
+  scrollToTop = () => {
+    if (this.props.projectsClicked) {
+      window.scrollTo(0, 0)
+    }
+  }
 
   mapProjectData = () => (
     projectData.map(project => (
@@ -17,9 +26,10 @@ class Projects extends React.Component {
             <Button
               url={`/projects/${project.id}`}
               text="Read more"
+              className="dark-button"
               height="40px"
               width="150px"
-              border="2px solid #2c422d" />
+              margin="5px 0px" />
           </div>
         </Link>
       </div>
@@ -31,7 +41,8 @@ class Projects extends React.Component {
       return <Button
         url="/projects"
         text="Show all projects"
-        border="2px solid #2c422d" />
+        className="dark-button"
+        margin="40px 0px" />
     }
   }
 

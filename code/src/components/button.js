@@ -8,14 +8,13 @@ class Button extends React.Component {
     const btnStyle = {
       height: this.props.height,
       width: this.props.width,
-      border: this.props.border,
-      color: this.props.color
+      margin: this.props.margin
     }
 
     return (
       <div className="button-section">
         <Link to={this.props.url}>
-          <button style={btnStyle}>
+          <button style={btnStyle} className={`button ${this.props.className}`}>
             {this.props.text}
           </button>
         </Link>

@@ -7,14 +7,21 @@
   }
 }
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .projects-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center; /* Change this to left when you have more then 4 projects */
+  justify-content: left;
   padding: 30px 50px;
-  /* animation: 0.8s ease 0s slideInFromTop;
-  z-index: 0; */
 }
 
 .projects-section h2.my-projects-title, .projects-section a {
@@ -61,6 +68,16 @@
 
 .project-hover-info:hover {
   opacity: 1;
+}
+
+.project-hover-info:hover h2 {
+  opacity: 1;
+  animation: 0.8s ease 0s slideInFromTop;
+}
+
+.project-hover-info:hover a {
+  opacity: 1;
+  animation: 0.8s ease 0s slideInFromBottom;
 }
 
 @media (min-width: 600px) {

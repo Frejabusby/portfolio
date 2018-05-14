@@ -23,7 +23,6 @@ time, mark, audio, video {
 
 * {
   box-sizing: border-box;
-	outline: none;
 }
 
 html, body {
@@ -41,7 +40,7 @@ h1 {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 38px;
 	margin: 15px 0px;
 }
 
@@ -57,4 +56,18 @@ h4 {
 
 p, a {
 	font-family: 'Raleway', sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+	h1 {
+		font-size: 72px;
+	}
+
+	h2 {
+		font-size: 52px;
+	}
 }
