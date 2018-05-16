@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import projectData from "../project-data"
 import Button from "./button"
 import "./projects.css"
@@ -18,8 +17,7 @@ class Projects extends React.Component {
   mapProjectData = () => (
     projectData.map(project => (
       <div className="project" key={project.id}>
-
-          <img src={require(`../images/${project.file}`)} alt="project overview" />
+        <img src={require(`../images/${project.file}`)} alt="project overview" />
         <div className="project-hover-info">
           <h2 className="project-name-hover">{project.name}</h2>
           <Button

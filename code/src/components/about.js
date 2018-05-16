@@ -42,7 +42,8 @@ class About extends React.Component {
             I’m a team player and think it’s important with knowledge sharing,
             especially in this trade.
             You really learn a lot by explaining your code to someone else.
-            For that reason, I joined Technigo and Tjejer kodar at Google Digitalakademin as a coding coach,
+            For that reason, I joined Technigo and Tjejer kodar
+            at Google Digitalakademin as a coding coach,
             which was so fun and a good experience.
           </p>
           <p>
@@ -70,7 +71,6 @@ class About extends React.Component {
         </div>
       )
     }
-
   }
 
   render() {

@@ -1,6 +1,5 @@
 import React from "react"
 import projectData from "../project-data"
-import Button from "./button"
 import "./project.css"
 
 class Project extends React.Component {
