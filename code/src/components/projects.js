@@ -17,21 +17,19 @@ class Projects extends React.Component {
 
   mapProjectData = () => (
     projectData.map(project => (
-      <div className="project">
-        <Link to={`/projects/${project.id}`}>
+      <div className="project" key={project.id}>
+
           <img src={require(`../images/${project.file}`)} alt="project overview" />
-          <div className="project-hover-info">
-            {/* <span>+</span> */}
-            <h2 className="project-name-hover">{project.name}</h2>
-            <Button
-              url={`/projects/${project.id}`}
-              text="Read more"
-              className="dark-button"
-              height="40px"
-              width="150px"
-              margin="5px 0px" />
-          </div>
-        </Link>
+        <div className="project-hover-info">
+          <h2 className="project-name-hover">{project.name}</h2>
+          <Button
+            url={`/projects/${project.id}`}
+            text="Read more"
+            className="dark-button"
+            height="40px"
+            width="150px"
+            margin="5px 0px" />
+        </div>
       </div>
     ))
   )

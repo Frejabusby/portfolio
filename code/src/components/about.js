@@ -51,7 +51,7 @@ class About extends React.Component {
           </p>
           <h2>Contact me:</h2>
           <a href="mailto:frejabusby@gmail.com">Mail</a>
-          <a href="https://www.linkedin.com/in/freja-busby-825a2890/" target="_blank" >Linkedin</a>
+          <a href="https://www.linkedin.com/in/freja-busby-825a2890/" target="_blank" rel="noopener noreferrer">Linkedin</a>
         </div>
       )
     } else {

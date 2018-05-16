@@ -13,6 +13,7 @@ class Project extends React.Component {
 
   componentDidMount() {
     this.findProject()
+    window.scrollTo(0, 0)
   }
 
   findProject = () => {
@@ -45,7 +46,7 @@ class Project extends React.Component {
     if (this.state.project.url !== undefined) {
       return (
         <div className="button-section">
-          <a href={`http://frejabusby.se/projects/${this.state.project.url}`} target="_blank">
+          <a href={`http://frejabusby.se/projects/${this.state.project.url}`} target="_blank" rel="noopener noreferrer">
             <button className="button dark-button">Live application</button>
           </a>
         </div>
