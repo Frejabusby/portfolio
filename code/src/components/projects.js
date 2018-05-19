@@ -50,7 +50,7 @@ class Projects extends React.Component {
     if (this.props.projectsClicked) {
       return this.mapProjectData()
     } else {
-      return this.mapProjectData().slice(1)
+      return this.mapProjectData().slice(2)
     }
   }
 
