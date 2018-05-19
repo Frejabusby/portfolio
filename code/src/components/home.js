@@ -7,12 +7,13 @@ import About from "./about"
 class Home extends React.Component {
   constructor(props) {
     super(props)
-    this.scrollTo = React.createRef()
+    this.scrollToProjects = React.createRef()
   }
 
   scrollDownTo = () => {
+
     window.scrollTo({
-      top: this.scrollTo.current.getBoundingClientRect().y,
+      top: this.scrollToProjects.current.getBoundingClientRect().top + window.scrollY,
       behavior: "smooth"
     })
   }
@@ -22,7 +23,7 @@ class Home extends React.Component {
       <div>
         <Hero
           callbackScroll={this.scrollDownTo} />
-        <div ref={this.scrollTo}>
+        <div ref={this.scrollToProjects}>
           <Projects />
         </div>
         <Topics />

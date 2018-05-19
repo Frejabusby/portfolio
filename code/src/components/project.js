@@ -16,26 +16,26 @@ class Project extends React.Component {
   }
 
   findProject = () => {
-    const project = projectData.find((project) => {
-      return project.id === this.props.match.params.id
-    })
+    const project = projectData.find(project => (
+      project.id === this.props.match.params.id
+    ))
     this.setState({
       project
     })
   }
 
   renderProjectImages = () => {
-    if (this.state.project.picDesktop !== undefined) {
+    if (this.state.project.desktopImage !== undefined) {
       return (
         <section className="project-image-section">
-          <img src={require(`../images/${this.state.project.picDesktop}`)} alt="project overview" />
-          <img src={require(`../images/${this.state.project.picMobile}`)} alt="project overview" />
+          <img src={require(`../images/${this.state.project.desktopImage}`)} alt="project overview" />
+          <img src={require(`../images/${this.state.project.mobileImage}`)} alt="project overview" />
         </section>
       )
     } else {
       return (
         <section className="project-image-section">
-          <img src={require(`../images/${this.state.project.file}`)} alt="project overview" />
+          <img src={require(`../images/${this.state.project.smallImage}`)} alt="project overview" />
         </section>
       )
     }
@@ -73,6 +73,6 @@ class Project extends React.Component {
       )
     }
   }
-  }
+}
 
 export default Project

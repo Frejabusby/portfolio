@@ -17,7 +17,11 @@ class Projects extends React.Component {
   mapProjectData = () => (
     projectData.map(project => (
       <div className="project" key={project.id}>
-        <img src={require(`../images/${project.file}`)} alt="project overview" />
+        <picture>
+          <source media="(min-width: 900px)" srcSet={require(`../images/${project.smallImage}`)} />
+          <source media="(max-width: 601px)" srcSet={require(`../images/${project.bigImage}`)} />
+          <img src={require(`../images/${project.smallImage}`)} alt="project overview" />
+        </picture>
         <div className="project-hover-info">
           <h2 className="project-name-hover">{project.name}</h2>
           <Button
@@ -38,7 +42,7 @@ class Projects extends React.Component {
         url="/projects"
         text="Show all projects"
         className="dark-button"
-        margin="40px 0px" />
+        margin="40px 0px 15px 0px" />
     }
   }
 

@@ -64,6 +64,7 @@
 
 .project-hover-info h2.project-name-hover {
   color: #2d422e;
+  text-align: center;
 }
 
 .project-hover-info:hover {
