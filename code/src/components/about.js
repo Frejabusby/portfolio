@@ -1,5 +1,6 @@
 import React from "react"
 import Button from "./button"
+import Skills from "./skills"
 import "./about.css"
 
 class About extends React.Component {
@@ -80,6 +81,7 @@ class About extends React.Component {
           <img src={require("../images/freja-busby.jpg")} alt="black and white pic of me, Freja Busby" />
         </div>
         {this.renderAboutText()}
+        {/* <Skills/> */}
       </div>
     )
   }

@@ -16,12 +16,17 @@
   }
 }
 
+@keyframes changeColor {
+  from { color: #2b422c; }
+  to { color: #f3f3f3; }
+}
+
 .projects-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
-  padding: 30px 50px;
+  padding: 50px 20px;
 }
 
 .projects-section h2.my-projects-title, .projects-section a {
@@ -31,9 +36,10 @@
 
 .project {
   border: 2px solid #f3f3f3;
-  margin: 20px;
+  margin: 20px 20px 35px 20px;
   width: calc(100% - 40px);
   position: relative;
+  text-align: center;
 }
 
 .project img {
@@ -67,21 +73,40 @@
   text-align: center;
 }
 
-.project-hover-info:hover {
+.project-hover-info:hover, .project-hover-info:focus {
   opacity: 1;
 }
 
-.project-hover-info:hover h2 {
+.project-hover-info:hover h2, .project-hover-info:focus h2 {
   opacity: 1;
   animation: 0.8s ease 0s slideInFromTop;
 }
 
-.project-hover-info:hover a {
+.project-hover-info:hover a, .project-hover-info:focus a {
   opacity: 1;
   animation: 0.8s ease 0s slideInFromBottom;
 }
 
+.project-info-link {
+  animation: changeColor 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+  display: block;
+  margin: 5px 0px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.project-info-link:hover {
+  color: #2b422c;
+  animation: changeColor 0s;
+}
+
 @media (min-width: 600px) {
+  .projects-section {
+    padding: 50px;
+  }
+
   .project {
     width: calc(50% - 40px);
   }
@@ -93,7 +118,7 @@
 
 @media (min-width: 900px) {
   .project {
-    margin: 15px;
+    margin: 15px 15px 30px 15px;
     width: calc(25% - 30px);
   }
 
@@ -103,5 +128,9 @@
 
   .project-hover-info button {
     font-size: 18px;
+  }
+
+  .project-info-link {
+    font-size: 14px;
   }
 }

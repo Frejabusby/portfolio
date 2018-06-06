@@ -10,8 +10,11 @@ class Home extends React.Component {
     this.scrollToProjects = React.createRef()
   }
 
-  scrollDownTo = () => {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
+  scrollDownTo = () => {
     window.scrollTo({
       top: this.scrollToProjects.current.getBoundingClientRect().top + window.scrollY,
       behavior: "smooth"

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import projectData from "../project-data"
 import Button from "./button"
 import "./projects.css"
@@ -32,6 +33,9 @@ class Projects extends React.Component {
             width="150px"
             margin="5px 0px" />
         </div>
+        <Link className="project-info-link" to={`/projects/${project.id}`}>
+          {project.name}
+        </Link>
       </div>
     ))
   )
